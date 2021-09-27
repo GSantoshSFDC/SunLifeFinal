@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Financial Services Account Listing">
+        <div style="width: auto;">
+            <template if:true={data}>
+                <lightning-datatable data={data}
+                                     columns={columns}
+                                     key-field="Id"
+                                     sorted-by={sortBy}
+                                     sorted-direction={sortDirection}
+                                     onsort={handleSortdata}
+                                     hide-checkbox-column="true"
+                                     draft-values={draftValues}
+                                    onsave={handleSave}></lightning-datatable>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
